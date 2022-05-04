@@ -1,19 +1,31 @@
 <template>
-  <layout-c>
+  <Layout>
     <template #header>
-      <header-c />
+      <Header />
     </template>
-  </layout-c>
+
+    <template #resume>
+      <Resume />
+    </template>
+
+    <template #movements>
+      <Movements />
+    </template>
+  </Layout>
 </template>
 
 <script>
-import LayoutC from "./LayoutC.vue";
-import HeaderC from "./HeaderC.vue";
+import Layout from "./LayoutC.vue";
+import Header from "./HeaderC.vue";
+import Resume from "./resume/IndexC.vue";
+import Movements from "./MovementsC.vue";
 
 export default {
   components: {
-    LayoutC,
-    HeaderC,
+    Layout,
+    Header,
+    Resume,
+    Movements,
   },
 };
 </script>
