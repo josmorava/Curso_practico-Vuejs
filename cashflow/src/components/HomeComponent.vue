@@ -9,8 +9,12 @@
         :label="label"
         :amount="amount"
         :totalAmount="100000"
-        :date="date"
-      />
+        :totalLabel="totalLabel"
+      >
+        <template #graphic> Grapihc </template>
+
+        <template #action> Action </template>
+      </Resume>
     </template>
 
     <template #movements>
@@ -36,7 +40,7 @@ export default {
     return {
       amount: null,
       label: "Ahorro total",
-      date: null,
+      totalLabel: null,
     };
   },
 };

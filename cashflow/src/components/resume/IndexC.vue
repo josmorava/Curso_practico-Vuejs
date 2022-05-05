@@ -1,17 +1,28 @@
 <template>
   <main>
-    <p>{{ dateFunc }}</p>
-    <h1>{{ amountVisual }}</h1>
+    <p>{{ labelVisual }}</p>
+    <h1>{{ amountCurrency }}</h1>
+    <div class="graphic">
+      <slot name="graphic"></slot>
+    </div>
+    <div class="action">
+      <slot name="action"></slot>
+    </div>
   </main>
 </template>
 
 <script>
+const currencyFormater = new Intl.NumberFormat("es-VE", {
+  style: "currency",
+  currency: "VES",
+});
+
 export default {
   props: {
     label: {
       type: String,
     },
-    date: {
+    totalLabel: {
       type: String,
       default: null,
     },
@@ -28,8 +39,11 @@ export default {
       //Dibuja el un valor entre las dos opciones
       return this.amount !== null ? this.amount : this.totalAmount;
     },
-    dateFunc() {
+    labelVisual() {
       return this.label !== null ? this.label : this.date;
+    },
+    amountCurrency() {
+      return currencyFormater.format(this.amountVisual);
     },
   },
 };
@@ -52,7 +66,7 @@ h1 {
   margin-top: 0;
   color: #2ecc71;
 }
-.grapihic {
+.graphic {
   display: flex;
   justify-content: center;
   align-items: center;
