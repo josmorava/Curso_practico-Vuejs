@@ -47,27 +47,27 @@ export default {
         id: 0,
         title: "Movimiento 1",
         description: "bla bla bla bla bla",
-        amount: 1000,
+        amount: 100,
       }, {
         id: 1,
         title: "Movimiento 2",
         description: "bla bla bla bla bla",
-        amount: 1000
+        amount: -100
       }, {
         id: 2,
         title: "Movimiento 3",
         description: "bla bla bla bla bla",
-        amount: 1000
+        amount: 230
       }, {
         id: 3,
         title: "Movimiento 4",
         description: "bla bla bla bla bla",
-        amount: 1000
+        amount: -200
       }, {
         id: 4,
         title: "Movimiento 5",
         description: "bla bla bla bla bla",
-        amount: 1000
+        amount: 500
       }]
     }
   },
